@@ -4,13 +4,8 @@ component: build
 
 steps:
   - type: Command
-    name: "Simple Build"
+    name: "Final Working Build"
     command: |
-      echo "Hello OCI DevOps 🚀"
+      echo "Build is running successfully 🚀"
       pwd
       ls -la
-
-outputArtifacts:
-  - name: app
-    type: BINARY
-    location: .
