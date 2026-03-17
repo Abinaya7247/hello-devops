@@ -15,7 +15,7 @@ steps:
       mkdir output
       cp -r * output/
 
-artifacts:
+outputArtifacts:
   - name: app
     type: BINARY
     location: output
