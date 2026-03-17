@@ -4,24 +4,19 @@ component: build
 
 steps:
   - type: Command
-    name: "Check Files"
-    command: |
-      echo "Listing files..."
-      ls -la
-
-  - type: Command
-    name: "Build"
+    name: "Prepare Output"
     command: |
       echo "Creating output folder..."
       mkdir -p output
       
       echo "Copying files..."
-      cp *.html output/ || true
-      cp *.js output/ || true
-
-      echo "Build completed"
+      cp index.html output/index.html
+      cp app.js output/app.js
+      
+      echo "Verifying output folder..."
+      ls -la output
 
 outputArtifacts:
   - name: app
     type: BINARY
-    location: output
+    location: output/
