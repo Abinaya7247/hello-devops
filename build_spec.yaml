@@ -4,19 +4,13 @@ component: build
 
 steps:
   - type: Command
-    name: "Prepare Output"
+    name: "Simple Build"
     command: |
-      echo "Creating output folder..."
-      mkdir -p output
-      
-      echo "Copying files..."
-      cp index.html output/index.html
-      cp app.js output/app.js
-      
-      echo "Verifying output folder..."
-      ls -la output
+      echo "Hello OCI DevOps 🚀"
+      pwd
+      ls -la
 
 outputArtifacts:
   - name: app
     type: BINARY
-    location: output/
+    location: .
