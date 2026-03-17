@@ -12,8 +12,9 @@ steps:
     name: "Build"
     command: |
       echo "Building project..."
-      mkdir output
-      cp -r * output/
+      mkdir -p output
+      cp index.html output/
+      cp app.js output/
 
 outputArtifacts:
   - name: app
