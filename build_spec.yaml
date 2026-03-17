@@ -1,0 +1,21 @@
+version: 0.1
+
+component: build
+
+steps:
+  - type: Command
+    name: "Install"
+    command: |
+      echo "Installing dependencies..."
+
+  - type: Command
+    name: "Build"
+    command: |
+      echo "Building project..."
+      mkdir output
+      cp -r * output/
+
+artifacts:
+  - name: app
+    type: BINARY
+    location: output
